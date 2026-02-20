@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="src/styles/styles.css" />
+
+    <title>Weather forecast</title>
+    </head>
+
+    <body>
+    <div id="container">
+    <div class="topbar">
+        <form id="search">
+        <i class="fa-solid fa-location-dot"></i>
+
+            <input
+            id="city_name"
+            name="city_name"
+            placeholder="Buscar cidade"
+            type="search"/>
+
+            <button type="submit" aria-label="Buscar cidade">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <button
+            type="button"
+            id="gps_btn"
+            class="icon-btn"
+            aria-label="Usar localização">
+            <i class="fa-solid fa-location-crosshairs"></i>
+        </button>
+
+        <button
+            type="button"
+            id="mic_btn"
+            class="icon-btn"
+            aria-label="Buscar por voz">
+            <i class="fa-solid fa-microphone"></i>
+        </button>
+
+        <button
+            aria-label="Alternar tema"
+            class="theme-toggle"
+            id="theme_toggle"
+            type="button">
+                <i aria-hidden="true" class="fa-solid fa-sun icon sun"></i>
+                <i aria-hidden="true" class="fa-solid fa-moon icon moon"></i>
+                <span aria-hidden="true" class="knob"></span>
+        </button>
+    </div>
+
+    <div id="weather">
+        <h1 id="title">Brasília, BR</h1>
+
+        <div id="infos">
+            <div id="temp">
+                <img id="temp_img"
+                    alt="Imagem do tempo"
+                    src="https://openweathermap.org/img/wn/04d@2x.png"/>
+
+            <div>
+                <p id="temp_value">32</p>
+                <p id="temp_description">Ensolarado</p>
+            </div>
+        </div>
+
+        <div id="other_infos">
+            <div class="info">
+                <i class="fa-solid fa-temperature-high" id="temp_max_icon"></i>
+                <div>
+                <h2>Temp. max</h2>
+                <p id="temp_max">32 <sup>°C</sup></p>
+            </div>
+        </div>
+
+            <div class="info">
+                <i class="fa-solid fa-temperature-low" id="temp_min_icon"></i>
+                <div>
+                <h2>Temp. min</h2>
+                <p id="temp_min">12 <sup>°C</sup></p>
+                </div>
+            </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-droplet" id="humidity_icon"></i>
+            <div>
+                <h2>Humidade</h2>
+                <p id="humidity">50%</p>
+                </div>
+            </div>
+
+                    <div class="info">
+                        <i class="fa-solid fa-wind" id="wind_icon"></i>
+                        <div>
+                            <h2>Vento</h2>
+                            <p id="wind">50 km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="alert"></div>
+    </div>
+
+        <script src="src/javascript/script.js"></script>
+    </body>
+</html>
